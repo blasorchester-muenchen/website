@@ -1,0 +1,12 @@
+{
+  "name": "boMUC e.V. — Blasorchester München",
+  "short_name": "boMUC",
+  "icons": [
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ],
+  "theme_color": "#0C0D0D",
+  "background_color": "#0C0D0D",
+  "display": "browser",
+  "start_url": "."
+}

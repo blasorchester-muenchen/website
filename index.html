@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>boMUC e.V. — Blasorchester München</title>
+<meta name="description" content="boMUC e.V. — Münchens junges sinfonisches Blasorchester. Konzerte, Programme und Mitspielen.">
+<meta name="theme-color" content="#0C0D0D">
+<meta property="og:title" content="boMUC e.V. — Blasorchester München">
+<meta property="og:description" content="Münchens junges sinfonisches Blasorchester. Konzerte, Programme und Mitspielen.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:image" content="assets/images/og.jpg">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Zum Inhalt springen</a>
+
+<header class="hdr" id="hdr">
+  <div class="wrap hdr__in">
+    <a class="hdr__logo" href="#top" aria-label="boMUC Startseite">
+      <img src="assets/images/logo.webp" alt="boMUC" width="336" height="120">
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Hauptnavigation">
+      <ul>
+        <li class="nav__group">
+          <a href="#konzerte">Konzerte</a>
+          <ul class="nav__sub">
+            <li><a href="#aktuell">Aktuelle Termine</a></li>
+            <li><a href="#vergangene">Vergangene Konzerte</a></li>
+            <li><a href="#stimmen">Publikumsstimmen</a></li>
+          </ul>
+        </li>
+        <li class="nav__group">
+          <a href="#ueber-uns">Über uns</a>
+          <ul class="nav__sub">
+            <li><a href="#orchester">Orchester</a></li>
+            <li><a href="#dirigent">Dirigent</a></li>
+            <li><a href="#vorstand">Vorstand</a></li>
+          </ul>
+        </li>
+        <li class="nav__group">
+          <a href="#kontakt">Kontakt</a>
+          <ul class="nav__sub">
+            <li><a href="#allgemein">Allgemein</a></li>
+            <li><a href="#mitspielen">Mitspielen</a></li>
+            <li><a href="#spenden">Unterstützen</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <button class="hdr__toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Menü öffnen">
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO — full viewport ============ -->
+  <section class="hero hero--full" id="top">
+    <picture>
+      <source type="image/webp"
+              srcset="assets/images/hero-thumb.webp 800w, assets/images/hero.webp 3200w"
+              sizes="100vw">
+      <img class="hero__bg" src="assets/images/hero.webp"
+           alt="Das Blasorchester München auf der Bühne"
+           width="3200" height="2400" fetchpriority="high" decoding="async">
+    </picture>
+    <div class="wrap">
+      <div class="hero__head">
+        <p class="hero__meta">
+          <span class="hero__brand">boMUC e.V.</span>
+          <span>Blasorchester München</span>
+        </p>
+        <h1>Musik,<br>die <strong>bewegt.</strong></h1>
+        <p class="lead">Münchens junges sinfonisches Blasorchester — leidenschaftlich,
+           ambitioniert, unvergesslich.</p>
+        <div class="actions">
+          <a class="btn btn--primary" href="#aktuell">Konzerte &amp; Tickets</a>
+          <a class="btn btn--ghost" href="https://www.instagram.com/_bomuc/"
+             target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                 stroke-linecap="square" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18"/>
+              <circle cx="12" cy="12" r="4.2"/>
+              <path d="M17.2 6.8h.01"/>
+            </svg>
+            Instagram <span class="visually-hidden">(öffnet in neuem Tab)</span>
+          </a>
+          <a class="btn btn--ghost" href="#mitspielen">Mitspielen</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NÄCHSTES KONZERT ============ -->
+  <section class="band band--acc hatch compact-band">
+    <div class="wrap">
+      <div class="next">
+        <span class="next__label">Nächstes Konzert</span>
+        <span class="next__title">Hymn &amp; Halleluja</span>
+        <span class="next__when">Sa, 05. Dezember 2026 · 19:30 Uhr</span>
+        <a class="link" href="https://bomuc.chayns.site/termine" target="_blank" rel="noopener noreferrer">Tickets → <span class="visually-hidden">(öffnet in neuem Tab)</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ZAHLEN ============ -->
+  <section class="band band--alt compact-band">
+    <div class="stats">
+      <div class="stat reveal"><span class="stat__n" data-counter="50" data-suffix="+">50+</span><span class="stat__l">Musiker&shy;innen &amp; Musiker</span></div>
+      <div class="stat reveal"><span class="stat__n">2023</span><span class="stat__l">Gründungsjahr</span></div>
+      <div class="stat reveal"><span class="stat__n" data-counter="6" data-suffix="+">6+</span><span class="stat__l">Konzerte gespielt</span></div>
+      <div class="stat reveal"><span class="stat__n" data-counter="100" data-suffix="%">100%</span><span class="stat__l">Ehrenamtlich</span></div>
+    </div>
+  </section>
+
+
+  <!-- ==================================================================
+       KAPITEL 01 — KONZERTE
+       ================================================================== -->
+  <section class="chapter" id="konzerte">
+    <div class="wrap chapter__in">
+      <p class="chapter__n">01</p>
+      <div>
+        <h2>Konzerte</h2>
+        <p>Zwei Programme pro Saison, kuratiert von der Originalliteratur für
+           sinfonisches Blasorchester bis zu Film- und Musicalmusik.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Aktuelle Termine -->
+  <section class="band" id="aktuell">
+    <div class="wrap">
+      <div class="head-row">
+        <div>
+          <span class="label">Aktuelle Termine</span>
+          <h2>Erlebe boMUC <strong>live.</strong></h2>
+        </div>
+      </div>
+
+      <div class="rows">
+        <article class="row reveal">
+          <p class="row__date">Sa, 05. Dez 2026<br>19:30 Uhr</p>
+          <div>
+            <h3 class="row__title">Hymn &amp; Halleluja</h3>
+            <p class="row__venue"><a class="venue-link"
+               href="https://www.google.com/maps/search/?api=1&amp;query=Stephanuskirche+Neuhausen+Nibelungenstra%C3%9Fe+51+M%C3%BCnchen"
+               target="_blank" rel="noopener noreferrer">Stephanuskirche Neuhausen · Nibelungenstraße 51, München</a></p>
+          </div>
+          <a class="btn btn--primary" href="https://bomuc.chayns.site/termine" target="_blank" rel="noopener noreferrer">Tickets <span class="visually-hidden">(öffnet in neuem Tab)</span></a>
+        </article>
+
+        <article class="row reveal">
+          <p class="row__date">Sa, 15. Mai 2027<br>19:30 Uhr</p>
+          <div>
+            <h3 class="row__title">Frühlingskonzert 2027</h3>
+            <p class="row__venue"><a class="venue-link"
+               href="https://www.google.com/maps/search/?api=1&amp;query=Alte+Kongresshalle+M%C3%BCnchen"
+               target="_blank" rel="noopener noreferrer">Alte Kongresshalle · Am Bavariapark 14, München</a></p>
+          </div>
+          <a class="btn btn--ghost" href="https://bomuc.chayns.site/termine" target="_blank" rel="noopener noreferrer">Vormerken <span class="visually-hidden">(öffnet in neuem Tab)</span></a>
+        </article>
+      </div>
+
+      <aside class="offer reveal">
+        <div>
+          <span class="label">Konzertabo</span>
+          <h3>Alle Konzerte. Ein Jahresabo.</h3>
+          <p>Freikarten für alle boMUC-Konzerte — automatisch und günstiger.</p>
+        </div>
+        <p class="offer__price">20 € / Jahr<small>10 € statt 12 € je Konzert</small></p>
+        <a class="btn btn--primary" href="https://bomuc.org/ticketabo"
+           target="_blank" rel="noopener noreferrer">Jahresabo <span class="visually-hidden">(öffnet in neuem Tab)</span></a>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Vergangene Konzerte — Karussell -->
+  <section class="band band--alt hatch" id="vergangene">
+    <div class="wrap" data-cara>
+      <div class="cara-head">
+        <div>
+          <span class="label">Vergangene Konzerte</span>
+          <h2>Unser <strong>Konzertarchiv.</strong></h2>
+        </div>
+        <div class="cara-tools">
+          <button class="program-toggle" type="button" data-program-toggle
+                  aria-expanded="false" aria-controls="concert-archive">Programmhöhepunkte anzeigen</button>
+          <div class="cara-nav">
+            <button class="cara-btn" type="button" data-cara-prev aria-label="Vorherige Konzerte">&#8592;</button>
+            <button class="cara-btn" type="button" data-cara-next aria-label="Weitere Konzerte">&#8594;</button>
+          </div>
+        </div>
+      </div>
+
+      <section class="cara" id="concert-archive" tabindex="0" aria-label="Vergangene Konzerte">
+        <article class="pc">
+          <a class="pc__vis media-open" href="assets/images/concert-into-the-west.webp"
+             data-lightbox="concerts" data-caption="Into the West · April 2026">
+            <img src="assets/images/concert-into-the-west-thumb.webp"
+                 alt="Konzertmotiv Into the West" width="800" height="736" loading="lazy" decoding="async">
+          </a>
+          <div class="pc__body">
+            <p class="pc__date">25. April 2026</p>
+            <h3>Into the West</h3>
+            <p class="pc__venue"><a class="venue-link"
+               href="https://www.google.com/maps/search/?api=1&amp;query=Kulturzentrum+Trudering+M%C3%BCnchen"
+               target="_blank" rel="noopener noreferrer">Kulturzentrum Trudering</a></p>
+            <div class="pc__program">
+              <span class="pc__program-label">Programmhöhepunkte</span>
+              <ul class="prog">
+                <li>Legend of Maracaibo · José Alberto Pina</li>
+                <li>Imagasy · Thiemo Kraas</li>
+                <li>Shenandoah · Frank Ticheli</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="pc">
+          <a class="pc__vis media-open" href="assets/images/concert-across-borders.webp"
+             data-lightbox="concerts" data-caption="Across Borders · November 2025">
+            <img src="assets/images/concert-across-borders-thumb.webp"
+                 alt="Konzertmotiv Across Borders" width="800" height="532" loading="lazy" decoding="async">
+          </a>
+          <div class="pc__body">
+            <p class="pc__date">29. Nov 2025</p>
+            <h3>Across Borders</h3>
+            <p class="pc__venue"><a class="venue-link"
+               href="https://www.google.com/maps/search/?api=1&amp;query=Stephanuskirche+Neuhausen+Nibelungenstra%C3%9Fe+51+M%C3%BCnchen"
+               target="_blank" rel="noopener noreferrer">Stephanuskirche Neuhausen</a></p>
+            <div class="pc__program">
+              <span class="pc__program-label">Programmhöhepunkte</span>
+              <ul class="prog">
+                <li>Russian Christmas Music · Alfred Reed</li>
+                <li>Ouvertüre zu Dichter und Bauer · Franz von Suppè</li>
+                <li>Highlights from “Chess” · arr. Johan de Meij</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="pc">
+          <a class="pc__vis media-open" href="assets/images/concert-licht-schatten.webp"
+             data-lightbox="concerts" data-caption="Zwischen Licht und Schatten · Mai 2025">
+            <img src="assets/images/concert-licht-schatten-thumb.webp"
+                 alt="Konzertmotiv Zwischen Licht und Schatten" width="800" height="764" loading="lazy" decoding="async">
+          </a>
+          <div class="pc__body">
+            <p class="pc__date">17. Mai 2025</p>
+            <h3>Zwischen Licht und Schatten</h3>
+            <p class="pc__venue"><a class="venue-link"
+               href="https://www.google.com/maps/search/?api=1&amp;query=Kulturhaus+Milbertshofen+M%C3%BCnchen"
+               target="_blank" rel="noopener noreferrer">Kulturhaus Milbertshofen</a></p>
+            <div class="pc__program">
+              <span class="pc__program-label">Programmhöhepunkte</span>
+              <ul class="prog">
+                <li>Tanz der Vampire · Jim Steinman, arr. Wolfgang Wössner</li>
+                <li>Lord Tullamore · Carl Wittrock</li>
+                <li>Rikudim · Jan van der Roost</li>
+                <li>T-Bone Concerto · Johan de Meij · Solist: Henning Kühl</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="pc">
+          <a class="pc__vis media-open" href="assets/images/concert-misty-mountains.webp"
+             data-lightbox="concerts" data-caption="Misty Mountains · Dezember 2024">
+            <img src="assets/images/concert-misty-mountains-thumb.webp"
+                 alt="Bergmotiv Misty Mountains" width="800" height="450" loading="lazy" decoding="async">
+          </a>
+          <div class="pc__body">
+            <p class="pc__date">07. Dez 2024</p>
+            <h3>Misty Mountains</h3>
+            <p class="pc__venue"><a class="venue-link"
+               href="https://www.google.com/maps/search/?api=1&amp;query=Stephanuskirche+Neuhausen+Nibelungenstra%C3%9Fe+51+M%C3%BCnchen"
+               target="_blank" rel="noopener noreferrer">Stephanuskirche Neuhausen</a></p>
+            <div class="pc__program">
+              <span class="pc__program-label">Programmhöhepunkte</span>
+              <ul class="prog">
+                <li>Red Rock Mountain · Rossano Galante</li>
+                <li>Der Magnetberg · Mario Bürki</li>
+                <li>Pilatus – Mountain of Dragons · Steven Reineke</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="pc">
+          <a class="pc__vis media-open" href="assets/images/concert-green-gold.webp"
+             data-lightbox="concerts" data-caption="Green &amp; Gold · Mai 2024">
+            <img src="assets/images/concert-green-gold-thumb.webp"
+                 alt="Grün-goldenes Konzertmotiv" width="800" height="800" loading="lazy" decoding="async">
+          </a>
+          <div class="pc__body">
+            <p class="pc__date">04. Mai 2024</p>
+            <h3>Green &amp; Gold</h3>
+            <p class="pc__venue"><a class="venue-link"
+               href="https://www.google.com/maps/search/?api=1&amp;query=B%C3%BCrgersaal+F%C3%BCrstenried+M%C3%BCnchen"
+               target="_blank" rel="noopener noreferrer">Bürgersaal Fürstenried</a></p>
+            <div class="pc__program">
+              <span class="pc__program-label">Programmhöhepunkte</span>
+              <ul class="prog">
+                <li>English Folk Song Suite · Ralph Vaughan Williams</li>
+                <li>Songs from the Catskills · Johan de Meij</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="pc">
+          <div class="pc__vis pc__ph">
+            <span>Aufbruch · 2023</span>
+          </div>
+          <div class="pc__body">
+            <p class="pc__date">05. Nov 2023</p>
+            <h3>Aufbruch</h3>
+            <p class="pc__venue"><a class="venue-link"
+               href="https://www.google.com/maps/search/?api=1&amp;query=Stephanuskirche+Neuhausen+Nibelungenstra%C3%9Fe+51+M%C3%BCnchen"
+               target="_blank" rel="noopener noreferrer">Stephanuskirche Neuhausen</a></p>
+            <div class="pc__program">
+              <span class="pc__program-label">Programmhöhepunkte</span>
+              <ul class="prog">
+                <li>Arsenal · Jan van der Roost</li>
+                <li>Legend of Maracaibo · José Alberto Pina</li>
+                <li>To My Country · Bernard Zweers</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </section>
+    </div>
+  </section>
+
+  <section class="band" id="stimmen">
+    <div class="wrap">
+      <div class="head-row">
+        <div>
+          <span class="label">Publikumsstimmen</span>
+          <h2>Was unsere Zuhörer <strong>sagen.</strong></h2>
+        </div>
+      </div>
+
+      <div class="quotes">
+        <div class="qc reveal">
+          <blockquote>Ein fulminanter Auftakt — das Orchester hat das Publikum von der ersten
+            Note an mitgerissen. Gespielt vor ausverkauftem Haus.</blockquote>
+          <cite>Wochenanzeiger München · Nov 2023</cite>
+        </div>
+        <div class="qc reveal">
+          <blockquote>Man hört sofort, dass hier Menschen spielen, die das aus echter
+            Überzeugung tun. Das ist in der Münchner Musikszene wirklich selten.</blockquote>
+          <cite>Zuhörerin · Konzert »Green &amp; Gold«</cite>
+        </div>
+        <div class="qc reveal">
+          <blockquote>Von klassischen Chorälen bis zu Filmmusik — ein Programm für jeden
+            Geschmack. Die Energie im Saal war unglaublich.</blockquote>
+          <cite>Konzertbesucher · Stephanuskirche</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================================================================
+       KAPITEL 02 — ÜBER UNS
+       ================================================================== -->
+  <section class="chapter" id="ueber-uns">
+    <div class="wrap chapter__in">
+      <p class="chapter__n">02</p>
+      <div>
+        <h2>Über uns</h2>
+        <p>Rund 50 Menschen. Ehrenamtlich. Mit professionellem Anspruch.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Orchester -->
+  <section class="band" id="orchester">
+    <div class="wrap">
+      <div class="split split--wide">
+        <div class="reveal reveal--left">
+          <span class="label">Orchester</span>
+          <h2>Ein <strong>Novum</strong> für Münchens Kulturszene.</h2>
+          <hr class="rule rule--acc">
+          <div class="stack">
+            <p>Seit 2023 bringen wir sinfonische Blasmusik auf hohem Niveau auf Münchens
+               Konzertbühnen — ehrenamtlich, ambitioniert und mit voller Besetzung.</p>
+            <div class="accordion">
+              <details class="more">
+                <summary>Unsere Besetzung</summary>
+                <div class="more__body">
+                  <p>Rund 50 Musikerinnen und Musiker zwischen 19 und 63 Jahren, aus vielen
+                     Nationen, in München zusammengefunden. Die Schlüsselstimmen sind
+                     inzwischen voll besetzt, das Schlagwerk spielt auf eigenem Instrumentarium.</p>
+                </div>
+              </details>
+              <details class="more">
+                <summary>Unsere Probenarbeit</summary>
+                <div class="more__body">
+                  <p>Freitags von 19:30 bis 21:45 Uhr proben wir in der Aula der Grundschule
+                     an der Helmholtzstraße. Dazu kommen Satz- und Registerproben nach
+                     Absprache sowie Probenwochenenden zur Konzertvorbereitung.</p>
+                </div>
+              </details>
+              <details class="more">
+                <summary>Unser Repertoire</summary>
+                <div class="more__body">
+                  <p>Schwerpunkt ist die Originalliteratur für sinfonisches Blasorchester —
+                     von Jan van der Roost bis Alfred Reed — ergänzt um Film- und
+                     Musicalmusik. Jedes Programm folgt einem Thema, nicht einer Werkliste.</p>
+                </div>
+              </details>
+              <details class="more">
+                <summary>Unsere Entwicklung</summary>
+                <div class="more__body">
+                  <p>2023 mit gerade spielfähiger Besetzung gestartet, heute ein voll besetztes
+                     Orchester mit zwei großen Konzerten pro Jahr und wachsendem Stammpublikum.
+                     Im Mai 2027 spielen wir, unterstützt von der Curt Wills-Stiftung, in der
+                     Alten Kongresshalle.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+
+        <figure class="frame reveal reveal--right">
+          <a class="media-open" href="assets/images/galerie2.webp"
+             data-lightbox="orchestra" data-caption="Across Borders · November 2025">
+            <img src="assets/images/galerie2-thumb.webp"
+                 alt="Das Orchester im Konzert" width="800" height="534" loading="lazy" decoding="async">
+          </a>
+          <figcaption><span>Across Borders · November 2025</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vision -->
+  <section class="band band--alt hatch">
+    <div class="wrap">
+      <div class="quote-lg reveal">
+        <span class="label">Vision</span>
+        <blockquote>Wir wollen eine neue Institution für sinfonisch-konzertante Blasmusik
+          in München schaffen — ein <strong>Novum</strong> für das kulturelle Angebot der Stadt.</blockquote>
+        <cite>Florian Ullrich · Dirigent boMUC e.V.</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galerie, randlos -->
+  <section class="gallery" aria-label="Fotogalerie">
+    <a href="assets/images/hero.webp" data-lightbox="orchestra"
+       data-caption="Into the West · April 2026">
+      <img src="assets/images/hero-thumb.webp"
+           alt="boMUC bei Into the West" width="800" height="600" loading="lazy" decoding="async">
+      <span class="gallery__caption">Into the West · April 2026</span>
+    </a>
+    <a href="assets/images/orchestra-weekend-2026.webp" data-lightbox="orchestra"
+       data-caption="Probenwochenende · April 2026">
+      <img src="assets/images/orchestra-weekend-2026-thumb.webp"
+           alt="boMUC beim Probenwochenende im Frühjahr 2026" width="800" height="600" loading="lazy" decoding="async">
+      <span class="gallery__caption">Probenwochenende · April 2026</span>
+    </a>
+    <a href="assets/images/galerie1.webp" data-lightbox="orchestra"
+       data-caption="Across Borders · November 2025">
+      <img src="assets/images/galerie1-thumb.webp"
+           alt="Konzert Across Borders" width="800" height="534" loading="lazy" decoding="async">
+      <span class="gallery__caption">Across Borders · November 2025</span>
+    </a>
+    <a href="assets/images/across-orchestra.webp" data-lightbox="orchestra"
+       data-caption="Across Borders · November 2025">
+      <img src="assets/images/across-orchestra-thumb.webp"
+           alt="boMUC bei Across Borders" width="800" height="534" loading="lazy" decoding="async">
+      <span class="gallery__caption">Across Borders · November 2025</span>
+    </a>
+    <a href="assets/images/across-brass.webp" data-lightbox="orchestra"
+       data-caption="Across Borders · November 2025">
+      <img src="assets/images/across-brass-thumb.webp"
+           alt="Blechbläser bei Across Borders" width="800" height="534" loading="lazy" decoding="async">
+      <span class="gallery__caption">Across Borders · November 2025</span>
+    </a>
+    <a href="assets/images/misty-dirigent.webp" data-lightbox="orchestra"
+       data-caption="Misty Mountains · Dezember 2024">
+      <img src="assets/images/misty-dirigent-thumb.webp"
+           alt="boMUC bei Misty Mountains" width="800" height="534" loading="lazy" decoding="async">
+      <span class="gallery__caption">Misty Mountains · Dezember 2024</span>
+    </a>
+  </section>
+
+  <!-- Dirigent -->
+  <section class="band" id="dirigent">
+    <div class="wrap">
+      <div class="split split--narrow">
+        <figure class="frame reveal reveal--left">
+          <a class="media-open" href="assets/images/dirigent.webp"
+             data-lightbox="portrait" data-caption="Florian Ullrich · Dirigent">
+            <img src="assets/images/dirigent-thumb.webp"
+                 alt="Florian Ullrich, Dirigent" width="600" height="794" loading="lazy" decoding="async">
+          </a>
+          <figcaption><span>Florian Ullrich</span><span>Dirigent</span></figcaption>
+        </figure>
+
+        <div class="reveal reveal--right">
+          <span class="label">Dirigent</span>
+          <h2>Leidenschaft, die das Orchester trägt.</h2>
+          <hr class="rule rule--acc">
+          <div class="stack">
+            <p>Florian Ullrich gründete boMUC 2023. Sein Ziel: musikalische Qualität,
+               konzentrierte Proben und Konzerte, die Publikum und Orchester begeistern.</p>
+            <div class="accordion">
+              <details class="more">
+                <summary>Sein Werdegang</summary>
+                <div class="more__body">
+                  <p>1993 in München geboren, mit neun Jahren erster Klarinettenunterricht.
+                     Er spielte in sinfonischen Blasorchestern in München und Umland, in
+                     Helsinki und Schladming und schloss 2019 den C3-Lehrgang des Musikbundes
+                     Ober- und Niederbayern mit Auszeichnung ab. Seit 2017 leitet er das
+                     Jugendorchester des Sinfonischen Blasorchesters Germering.</p>
+                </div>
+              </details>
+              <details class="more">
+                <summary>Seine Impulse</summary>
+                <div class="more__body">
+                  <p>Musikalische Impulse erhielt er in der Arbeit mit Steven Bryant,
+                     Verena Mösenbichler-Bryant, Markus Theinert, Johann Mösenbichler,
+                     Kevin Sedatole, Isabelle Ruf-Weber und Alejandro Vila. Prägend für
+                     Dirigat und Orchesterentwicklung ist seit 2018 der Unterricht bei
+                     Manuel Epli.</p>
+                </div>
+              </details>
+              <details class="more">
+                <summary>Seine Arbeitsweise</summary>
+                <div class="more__body">
+                  <p>Grundlage jeder Begeisterung sind musikalische Qualität und Freude
+                     am Spielen:</p>
+                  <ul class="prog">
+                    <li>detailreiche musikalische Arbeit</li>
+                    <li>spannende Originalliteratur für sinfonisches Blasorchester</li>
+                    <li>konzentrierte Zeit in der Probe statt langer Abende</li>
+                    <li>langfristige Orchesterentwicklung</li>
+                    <li>ausdrucksstarke, beeindruckende Konzerte</li>
+                    <li>Investition in eine gesunde Orchestergemeinschaft</li>
+                  </ul>
+                </div>
+              </details>
+              <details class="more">
+                <summary>Sein zweites Fach</summary>
+                <div class="more__body">
+                  <p>An der Ludwig-Maximilians-Universität München schloss er sein
+                     Chemiestudium mit der Promotion ab und leitet heute die
+                     Qualitätskontrolle in der chemischen Industrie — eine zweite Schule
+                     für Präzision, die auch seine Probenarbeit prägt.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vorstand -->
+  <section class="band band--alt" id="vorstand">
+    <div class="wrap">
+      <div class="head-row">
+        <div>
+          <span class="label">Vorstand</span>
+          <h2>Die Köpfe hinter <strong>boMUC.</strong></h2>
+        </div>
+      </div>
+
+      <div class="board-layout">
+        <figure class="frame board-fig reveal reveal--left">
+          <a class="media-open" href="assets/images/vorstand.webp"
+             data-lightbox="board" data-caption="Vorstand des boMUC e.V.">
+            <img src="assets/images/vorstand-thumb.webp"
+                 alt="Der Vorstand des boMUC e.V." width="800" height="798" loading="lazy" decoding="async">
+          </a>
+          <figcaption><span>Der Vorstand</span></figcaption>
+        </figure>
+
+        <ul class="board reveal reveal--right">
+          <li class="person"><div class="person__ini">SF</div><p class="person__nm">Sarah Feigl</p><p class="person__rl">Vorsitzende</p></li>
+          <li class="person"><div class="person__ini">LM</div><p class="person__nm">Lukas Müller</p><p class="person__rl">stellv. Vorsitzender</p></li>
+          <li class="person"><div class="person__ini">KH</div><p class="person__nm">Kim Hasselbach</p><p class="person__rl">Marketing</p></li>
+          <li class="person"><div class="person__ini">AW</div><p class="person__nm">Antonia Waldner</p><p class="person__rl">Kassiererin</p></li>
+          <li class="person"><div class="person__ini">DW</div><p class="person__nm">Dominik Wiedenmann</p><p class="person__rl">Schriftführer</p></li>
+          <li class="person"><div class="person__ini">FU</div><p class="person__nm">Florian Ullrich</p><p class="person__rl">Dirigent</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================================================================
+       KAPITEL 03 — KONTAKT
+       ================================================================== -->
+  <section class="chapter" id="kontakt">
+    <div class="wrap chapter__in">
+      <p class="chapter__n">03</p>
+      <div>
+        <h2>Kontakt</h2>
+        <p>Ob Konzertanfrage, Mitspielen oder Unterstützung — wir freuen uns auf
+           deine Nachricht.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Allgemein -->
+  <section class="band" id="allgemein">
+    <div class="wrap">
+      <div class="split">
+        <div class="reveal">
+          <span class="label">Allgemein</span>
+          <h2>Schreib uns.</h2>
+          <hr class="rule rule--acc">
+          <p class="lead">Für Konzertanfragen, Kooperationen und Presse erreichst du uns
+             am schnellsten per E-Mail.</p>
+          <div class="actions">
+            <a class="btn btn--primary" href="mailto:info@bomuc.org">info@bomuc.org</a>
+            <a class="btn btn--ghost" href="https://www.instagram.com/_bomuc/"
+               target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                     stroke-linecap="square" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18"/>
+                <circle cx="12" cy="12" r="4.2"/>
+                <path d="M17.2 6.8h.01"/>
+              </svg>
+              Instagram <span class="visually-hidden">(öffnet in neuem Tab)</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <dl class="deflist">
+            <div><dt>Verein</dt><dd>boMUC e.V.</dd></div>
+            <div><dt>E-Mail</dt><dd>info@bomuc.org</dd></div>
+            <div><dt>Web</dt><dd>www.bomuc.org</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mitspielen -->
+  <section class="band band--alt" id="mitspielen">
+    <div class="wrap">
+      <div class="head-row">
+        <div>
+          <span class="label">Mitspielen</span>
+          <h2>Werde Teil von <strong>etwas Besonderem.</strong></h2>
+        </div>
+      </div>
+
+      <div class="split">
+        <div class="reveal">
+          <p class="lead">Du spielst ein Blasinstrument und suchst ein Ensemble, das Niveau mit
+             Gemeinschaft verbindet? Bei boMUC findest du beides — mitten in München.</p>
+
+          <dl class="deflist mt-5">
+            <div><dt>Probentag</dt><dd>Freitag</dd></div>
+            <div><dt>Zeit</dt><dd>19:30 – 21:45 Uhr</dd></div>
+            <div><dt>Ort</dt><dd><a class="venue-link"
+              href="https://www.google.com/maps/search/?api=1&amp;query=Grundschule+an+der+Helmholtzstra%C3%9Fe+Helmholtzstra%C3%9Fe+6+M%C3%BCnchen"
+              target="_blank" rel="noopener noreferrer">Grundschule an der Helmholtzstraße<br>Helmholtzstraße 6, München</a></dd></div>
+            <div><dt>Saison</dt><dd>Oktober bis April</dd></div>
+          </dl>
+        </div>
+
+        <div class="reveal">
+          <span class="label">Voraussetzungen</span>
+          <ul class="checks">
+            <li>Du spielst ein sinfonisches Blasinstrument auf gutem Niveau.</li>
+            <li>Du nimmst regelmäßig an Proben und Konzerten teil.</li>
+            <li>Du bringst echte Begeisterung für konzertante Blasmusik mit.</li>
+            <li>Du schätzt ein kollegiales, offenes Miteinander auf Augenhöhe.</li>
+          </ul>
+
+          <div class="actions">
+            <a class="btn btn--primary"
+               href="https://bomuc.notion.site/2297d1b51f4f80baa624d4e97bc0dd46"
+               target="_blank" rel="noopener noreferrer">Jetzt bewerben</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="slant from-800 to-acc" aria-hidden="true"></div>
+
+  <!-- Spenden -->
+  <section class="band band--acc hatch" id="spenden">
+    <div class="wrap">
+      <div class="split split--wide">
+        <div>
+          <span class="label">Unterstützen</span>
+          <h2>Hilf uns, Musik zu <strong>ermöglichen.</strong></h2>
+          <p class="support-copy">Als junger Verein freuen wir uns über
+             <a class="inline-link" href="mailto:info@bomuc.org?subject=Passive%20Mitgliedschaft">passive Mitglieder</a>,
+             <a class="inline-link" href="mailto:info@bomuc.org?subject=Spende%20an%20boMUC">Spenden</a> und
+             <a class="inline-link" href="mailto:info@bomuc.org?subject=Sponsoring%20boMUC">Sponsoren</a>.
+             Am einfachsten hilfst du uns, indem du
+             <a class="inline-link" href="#aktuell">zum Konzert kommst</a>.</p>
+        </div>
+        <div class="actions support-action">
+          <a class="btn btn--ghost" href="mailto:info@bomuc.org?subject=boMUC%20unterst%C3%BCtzen">Jetzt unterstützen</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="slant slant--rev from-acc to-900" aria-hidden="true"></div>
+
+</main>
+
+<dialog class="lightbox" id="lightbox" aria-label="Bildansicht">
+  <div class="lightbox__inner">
+    <button class="lightbox__close" type="button" data-lightbox-close aria-label="Bildansicht schließen">×</button>
+    <button class="lightbox__nav lightbox__prev" type="button" data-lightbox-prev aria-label="Vorheriges Bild">←</button>
+    <figure>
+      <img src="assets/images/hero-thumb.webp" data-lightbox-image alt="">
+      <figcaption data-lightbox-caption></figcaption>
+    </figure>
+    <button class="lightbox__nav lightbox__next" type="button" data-lightbox-next aria-label="Nächstes Bild">→</button>
+  </div>
+</dialog>
+
+<footer class="band compact-foot">
+  <div class="wrap">
+    <div class="foot">
+      <a href="#top" aria-label="Nach oben">
+        <img src="assets/images/logo.webp" alt="boMUC" width="336" height="120">
+      </a>
+      <p>© 2026 boMUC e.V.</p>
+      <nav aria-label="Weitere Links">
+        <a class="link" href="https://www.instagram.com/_bomuc/" target="_blank" rel="noopener noreferrer">Instagram <span class="visually-hidden">(öffnet in neuem Tab)</span></a>
+        <a class="link" href="impressum.html#impressum">Impressum</a>
+        <a class="link" href="impressum.html#datenschutz">Datenschutz</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>

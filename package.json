@@ -1,0 +1,32 @@
+{
+  "name": "bomuc-website",
+  "private": true,
+  "description": "Development and CI tooling for the boMUC static site. Not deployed.",
+  "scripts": {
+    "build": "bash tools/build.sh",
+    "lint": "npm run lint:html && npm run lint:css && npm run lint:js",
+    "lint:html": "html-validate index.html impressum.html 404.html",
+    "lint:css": "stylelint \"css/**/*.css\"",
+    "lint:js": "eslint js/main.js tests/*.spec.js eslint.config.mjs",
+    "test": "npm run test:a11y && npm run test:e2e && npm run test:links",
+    "test:a11y": "start-server-and-test serve http://127.0.0.1:4173 test:a11y:run",
+    "test:a11y:run": "pa11y-ci --config pa11yci.json",
+    "test:e2e": "playwright test",
+    "test:links": "start-server-and-test serve http://127.0.0.1:4173 test:links:run",
+    "test:links:run": "node tests/check-links.mjs",
+    "lighthouse": "start-server-and-test serve http://127.0.0.1:4173 lighthouse:run",
+    "lighthouse:run": "lhci autorun",
+    "serve": "python3 -m http.server 4173 --directory _site",
+    "check": "npm run lint && npm run build && npm run test && npm run lighthouse"
+  },
+  "devDependencies": {
+    "@lhci/cli": "^0.14.0",
+    "@playwright/test": "^1.62.1",
+    "eslint": "^9.39.5",
+    "html-validate": "^9.7.1",
+    "pa11y-ci": "^3.1.0",
+    "start-server-and-test": "^2.1.5",
+    "stylelint": "^16.26.1",
+    "stylelint-config-standard": "^36.0.1"
+  }
+}

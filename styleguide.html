@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>boMUC — Design System</title>
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  /* Styleguide-only presentation. Not part of the system. */
+  .sg-swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr)); gap: var(--hair); background: var(--rule); }
+  .sw { padding: var(--s-2); min-height: 7rem; display: flex; flex-direction: column; justify-content: flex-end; gap: 2px; }
+  .sw code { font-size: var(--fs-label); letter-spacing: 0.04em; }
+  .sw small { font-size: var(--fs-label); opacity: 0.75; }
+  .sg-table { width: 100%; border-collapse: collapse; font-size: var(--fs-sm); }
+  .sg-table th, .sg-table td { text-align: left; padding: var(--s-2) var(--s-2) var(--s-2) 0; border-bottom: var(--hair) solid var(--rule); vertical-align: top; }
+  .sg-table th { font-size: var(--fs-label); letter-spacing: var(--tr-label); text-transform: uppercase; color: var(--acc); font-weight: var(--fw-bold); }
+  .sg-table code { color: var(--text); }
+  .sg-chip { display: inline-block; width: 1rem; height: 1rem; vertical-align: -0.15em; margin-right: 0.4rem; border: var(--hair) solid var(--rule-strong); }
+  .sg-note { border-left: 2px solid var(--acc); padding-left: var(--s-2); color: var(--text-muted); font-size: var(--fs-sm); max-width: 62ch; }
+  .sg-demo { border: var(--hair) solid var(--rule); padding: var(--s-3); }
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <div class="wrap hdr__in">
+    <a class="hdr__logo" href="index.html" aria-label="boMUC Startseite">
+      <img src="assets/images/logo.webp" alt="boMUC" width="336" height="120">
+    </a>
+    <nav class="nav" aria-label="Styleguide-Navigation"><ul>
+      <li><a href="index.html">Website</a></li>
+      <li><a href="styleguide.html" aria-current="page">Design System</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<main>
+
+<section class="band hero hatch">
+  <div class="wrap">
+    <p class="hero__meta">
+      <span class="hero__brand">boMUC e.V.</span>
+      <span>Design System</span>
+    </p>
+    <h1 style="font-size:var(--fs-1)">Eine Sprache für <strong>Web und Print.</strong></h1>
+    <p class="lead">Alle Werte stammen aus <code>css/tokens.css</code>. Diese Seite rendert sie
+       live — was hier zu sehen ist, ist der tatsächliche Stand des Systems.</p>
+  </div>
+</section>
+
+<div class="slant from-900 to-800" aria-hidden="true"></div>
+
+<!-- ============ FARBE ============ -->
+<section class="band band--alt">
+  <div class="wrap">
+    <div class="head-row"><div>
+      <span class="label">01 — Farbe</span>
+      <h2>Akzent &amp; Graustufen.</h2>
+    </div></div>
+
+    <p class="sg-note" style="margin-bottom:var(--s-3)">
+      Ein Akzent, keine zweite Sonderfarbe. Mit <code>[P]</code> markierte Werte sind der
+      reduzierte Satz für Print und PowerPoint — die übrigen Abstufungen sind auf Papier
+      nicht unterscheidbar.
+    </p>
+
+    <div class="sg-swatches">
+      <div class="sw" style="background:#FFE700;color:#0C0D0D"><code>#FFE700</code><small>--acc [P]</small></div>
+      <div class="sw" style="background:#E6D000;color:#0C0D0D"><code>#E6D000</code><small>--acc-press</small></div>
+      <div class="sw" style="background:#0C0D0D;color:#EDEFEE"><code>#0C0D0D</code><small>--g-900 [P]</small></div>
+      <div class="sw" style="background:#141616;color:#EDEFEE"><code>#141616</code><small>--g-800</small></div>
+      <div class="sw" style="background:#1C1F1F;color:#EDEFEE"><code>#1C1F1F</code><small>--g-700</small></div>
+      <div class="sw" style="background:#282C2C;color:#EDEFEE"><code>#282C2C</code><small>--g-600 [P]</small></div>
+      <div class="sw" style="background:#686D6D;color:#F4F5F4"><code>#686D6D</code><small>--g-500 [P]</small></div>
+      <div class="sw" style="background:#868B8B;color:#0C0D0D"><code>#868B8B</code><small>--g-400</small></div>
+      <div class="sw" style="background:#9BA0A0;color:#0C0D0D"><code>#9BA0A0</code><small>--g-300 [P]</small></div>
+      <div class="sw" style="background:#B8BCBB;color:#0C0D0D"><code>#B8BCBB</code><small>--g-200 [P]</small></div>
+      <div class="sw" style="background:#E0E2E1;color:#0C0D0D"><code>#E0E2E1</code><small>--g-100</small></div>
+      <div class="sw" style="background:#F4F5F4;color:#0C0D0D"><code>#F4F5F4</code><small>--g-000 [P]</small></div>
+    </div>
+
+    <h3 class="mt-5">Regeln für den Akzent</h3>
+    <ul class="checks mt-5">
+      <li><strong>Gelb auf Dunkel</strong> — Kontrast etwa 17:1. Für Text, Linien und Flächen geeignet.</li>
+      <li><strong>Schwarz auf Gelb</strong> — die einzige Textfarbe auf gelbem Grund. Nie Weiß.</li>
+      <li><strong>Gelb auf Weiß oder Hellgrau</strong> — Kontrast etwa 1,2:1. Niemals als Text,
+          nur als Fläche mit dunkler Schrift darauf oder als kräftige Linie.</li>
+      <li><strong>Sparsam</strong> — Linien, Labels, Kennzahlen, ein Call-to-Action pro Abschnitt.
+          Große gelbe Flächen nur als bewusste Unterbrechung.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ TYPOGRAFIE ============ -->
+<section class="band">
+  <div class="wrap">
+    <div class="head-row"><div>
+      <span class="label">02 — Typografie</span>
+      <h2>Outfit, drei Schnitte.</h2>
+    </div></div>
+
+    <p class="sg-note" style="margin-bottom:var(--s-4)">
+      Outfit bleibt bewusst etwas weicher als eine klassische Grotesk. Für bessere
+      Lesbarkeit nutzt das System keine 300er-Schnitte mehr und hält die Untergrenze bei 14 px.
+    </p>
+
+    <div class="stack">
+      <p style="font-size:var(--fs-display);font-weight:400;line-height:.98;letter-spacing:-.035em">Display</p>
+      <p style="font-size:var(--fs-1);font-weight:400">Überschrift 1</p>
+      <p style="font-size:var(--fs-2);font-weight:400">Überschrift 2</p>
+      <p style="font-size:var(--fs-3)">Überschrift 3 &amp; Lead</p>
+      <p>Fließtext — Münchens junges sinfonisches Blasorchester.</p>
+      <p style="font-size:var(--fs-sm);color:var(--text-muted)">Klein — Bildunterschrift, Programmzeile</p>
+      <p class="label" style="margin:0">Label — Abschnittsmarke</p>
+    </div>
+
+    <h3 class="mt-5">Die untere Hälfte trägt die Seite</h3>
+    <p class="sg-note" style="margin-bottom:var(--s-3)">
+      Auf Navigation, Buttons, Datumsangaben, Bildunterschriften und Fußzeile entfallen
+      zwei Drittel aller Textstellen. Deshalb liegen diese drei Stufen dicht beieinander
+      und nichts fällt unter 14 px.
+    </p>
+    <table class="sg-table">
+      <tr><th>Stufe</th><th>Größe</th><th>Verwendung</th></tr>
+      <tr><td><code>--fs-3</code></td><td>20 – 24 px</td><td>Überschrift 3, Lead, Zitate, Konzerttitel</td></tr>
+      <tr><td><code>--fs-body</code></td><td>18 px</td><td>Fließtext</td></tr>
+      <tr><td><code>--fs-sm</code></td><td>16 px</td><td>Bildunterschrift, Programmzeile, Impressum</td></tr>
+      <tr><td><code>--fs-label</code></td><td>14 px</td><td>Labels, Navigation, Buttons, Datum — Minimum</td></tr>
+    </table>
+
+    <h3 class="mt-5">Ziffern im Vergleich</h3>
+    <dl class="deflist">
+      <div><dt>Tabellarisch</dt><dd style="font-variant-numeric:tabular-nums">05.12.2026 · 19:30</dd></div>
+      <div><dt>Tabellarisch</dt><dd style="font-variant-numeric:tabular-nums">17.05.2025 · 18:00</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ============ GEOMETRIE ============ -->
+<section class="band band--alt hatch">
+  <div class="wrap">
+    <div class="head-row"><div>
+      <span class="label">03 — Geometrie</span>
+      <h2>Gerade Kanten, zwei Winkel.</h2>
+    </div></div>
+
+    <p class="sg-note" style="margin-bottom:var(--s-4)">
+      Radius ist überall 0. Es gibt genau zwei Winkelrollen: den flachen Schnitt zwischen
+      Abschnitten und den steilen Winkel für Textur und Akzente. Beide zu vermischen war
+      der Punkt, an dem der erste Entwurf unruhig wurde.
+    </p>
+
+    <table class="sg-table">
+      <tr><th>Rolle</th><th>Token</th><th>Wert</th><th>In PowerPoint</th></tr>
+      <tr>
+        <td>Abschnittsschnitt</td><td><code>--slant</code></td>
+        <td>Anstieg 28–72 px über die volle Breite</td>
+        <td>Rechtwinkliges Dreieck, Höhe = 4 % der Folienbreite</td>
+      </tr>
+      <tr>
+        <td>Textur &amp; Akzent</td><td><code>--angle-hatch</code></td>
+        <td>78° (12° aus der Vertikalen)</td>
+        <td>Musterfüllung „Breite Diagonale aufwärts“</td>
+      </tr>
+      <tr>
+        <td>Radius</td><td><code>--radius</code></td>
+        <td>0</td>
+        <td>Rechteck, keine abgerundeten Ecken</td>
+      </tr>
+    </table>
+
+    <h3 class="mt-5">Linienstärken</h3>
+    <p class="sg-note" style="margin-bottom:var(--s-3)">
+      Drei Stärken statt einer. Eine durchgehende 1-px-Linie wirkte auf dunklem Grund
+      zaghaft: Haarlinien verschwinden, und Akzentlinien verlieren ihre Aufgabe.
+    </p>
+    <table class="sg-table">
+      <tr><th>Token</th><th>Stärke</th><th>Verwendung</th></tr>
+      <tr><td><code>--hair</code></td><td>1 px</td><td>Trennlinien in Listen und Tabellen</td></tr>
+      <tr><td><code>--line</code></td><td>2 px</td><td>Sichtbare Kanten: Buttons, Navigation</td></tr>
+      <tr><td><code>--bar</code></td><td>4 px</td><td>Akzent: Kopfzeile, Abschnittsmarken, Kartenkante</td></tr>
+    </table>
+    <div class="sg-demo mt-5" style="display:grid;gap:var(--s-3)">
+      <div style="height:1px;background:var(--rule-strong)"></div>
+      <div style="height:2px;background:var(--rule-strong)"></div>
+      <div style="height:4px;background:var(--acc)"></div>
+    </div>
+
+    <h3 class="mt-5">Der Schnitt</h3>
+  </div>
+</section>
+
+<div class="slant from-800 to-900" aria-hidden="true"></div>
+<div class="slant slant--rev from-900 to-800" aria-hidden="true"></div>
+
+<section class="band band--alt">
+  <div class="wrap">
+    <p class="sg-note">Oben: <code>.slant</code> und <code>.slant--rev</code> im Wechsel.
+       Die 4 px starke gelbe Linie sitzt auf der Schnittkante und macht den Übergang
+       lesbar, auch wenn die beiden Grautöne nah beieinander liegen.</p>
+  </div>
+</section>
+
+
+<!-- ============ KOMPONENTEN ============ -->
+<section class="band">
+  <div class="wrap">
+    <div class="head-row"><div>
+      <span class="label">04 — Komponenten</span>
+      <h2>Bausteine.</h2>
+    </div></div>
+
+    <div class="split">
+      <div class="sg-demo">
+        <span class="label">Buttons</span>
+        <div class="actions" style="margin-top:0">
+          <a class="btn btn--primary" href="#">Primär</a>
+          <a class="btn btn--ghost" href="#">Sekundär</a>
+        </div>
+        <p class="mt-5"><a class="link" href="#">Textlink →</a></p>
+      </div>
+
+      <div class="sg-demo">
+        <span class="label">Kennzahl</span>
+        <p class="stat__n">50+</p>
+        <span class="stat__l">Musikerinnen &amp; Musiker</span>
+        <hr class="rule rule--acc">
+        <p><span class="tick" aria-hidden="true"></span> Schräger Akzentstrich</p>
+      </div>
+    </div>
+
+    <div class="rows mt-5">
+      <article class="row">
+        <p class="row__date">Sa, 05. Dez 2026<br>19:30 Uhr</p>
+        <div>
+          <h3 class="row__title">Konzertzeile</h3>
+          <p class="row__venue">Veranstaltungsort · Adresse</p>
+        </div>
+        <a class="btn btn--primary" href="#">Tickets</a>
+      </article>
+    </div>
+
+    <div class="split mt-5">
+      <div class="sg-demo">
+        <span class="label">Optionale Tiefe</span>
+        <p>Die Kernaussage bleibt immer sichtbar.</p>
+        <details class="more">
+          <summary>Mehr erfahren</summary>
+          <div class="more__body">
+            <p>Zusätzlicher Kontext öffnet sich erst auf Klick oder Tastendruck.
+               Hover ist dafür nie Voraussetzung.</p>
+          </div>
+        </details>
+      </div>
+      <div class="sg-demo">
+        <span class="label">Bewegung</span>
+        <p>Fotos zoomen auf Geräten mit Maus um höchstens 3,5 %. Inhalte erscheinen
+           einmalig und höchstens 24 px versetzt. Bei reduzierter Bewegung entfallen
+           alle Übergänge.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="slant from-900 to-acc" aria-hidden="true"></div>
+
+<!-- ============ POWERPOINT ============ -->
+<section class="band band--acc hatch">
+  <div class="wrap">
+    <div class="head-row"><div>
+      <span class="label">05 — Print</span>
+      <h2>PowerPoint-Theme.</h2>
+    </div></div>
+    <p style="max-width:60ch">PowerPoint arbeitet ausschließlich in RGB. Die Werte unten
+       einmal als Theme anlegen, dann greifen alle Folien automatisch auf dieselbe Palette
+       zu — dieselbe Rolle wie <code>tokens.css</code> im Web.</p>
+  </div>
+</section>
+
+<div class="slant slant--rev from-acc to-900" aria-hidden="true"></div>
+
+<section class="band">
+  <div class="wrap">
+    <h3>Theme-Farbfelder</h3>
+    <p class="sg-note" style="margin-bottom:var(--s-3)">
+      Entwurf → Farben → Farben anpassen. Werte als Hex eingeben.
+    </p>
+
+    <table class="sg-table">
+      <tr><th>PowerPoint-Feld</th><th>Hex</th><th>Rolle im System</th></tr>
+      <tr><td>Text/Hintergrund – Dunkel 1</td><td><span class="sg-chip" style="background:#0C0D0D"></span><code>#0C0D0D</code></td><td>Grundfläche, Text auf Gelb</td></tr>
+      <tr><td>Text/Hintergrund – Hell 1</td><td><span class="sg-chip" style="background:#F4F5F4"></span><code>#F4F5F4</code></td><td>Papier, Text auf Dunkel</td></tr>
+      <tr><td>Text/Hintergrund – Dunkel 2</td><td><span class="sg-chip" style="background:#282C2C"></span><code>#282C2C</code></td><td>Abgesetzte Fläche, Tabellenfüllung</td></tr>
+      <tr><td>Text/Hintergrund – Hell 2</td><td><span class="sg-chip" style="background:#B8BCBB"></span><code>#B8BCBB</code></td><td>Feine Linien auf Papier</td></tr>
+      <tr><td>Akzent 1</td><td><span class="sg-chip" style="background:#FFE700"></span><code>#FFE700</code></td><td>Münchner Gelb — der Akzent</td></tr>
+      <tr><td>Akzent 2</td><td><span class="sg-chip" style="background:#9BA0A0"></span><code>#9BA0A0</code></td><td>Gedämpfter Text, Bildunterschrift</td></tr>
+      <tr><td>Akzent 3</td><td><span class="sg-chip" style="background:#141616"></span><code>#141616</code></td><td>Zweiter Dunkelton</td></tr>
+      <tr><td>Akzent 4</td><td><span class="sg-chip" style="background:#686D6D"></span><code>#686D6D</code></td><td>Linien auf Dunkel</td></tr>
+      <tr><td>Akzent 5</td><td><span class="sg-chip" style="background:#E0E2E1"></span><code>#E0E2E1</code></td><td>Heller Grauton</td></tr>
+      <tr><td>Akzent 6</td><td><span class="sg-chip" style="background:#868B8B"></span><code>#868B8B</code></td><td>Sehr gedämpfter Text</td></tr>
+      <tr><td>Hyperlink</td><td><span class="sg-chip" style="background:#FFE700"></span><code>#FFE700</code></td><td>Links</td></tr>
+      <tr><td>Besuchter Hyperlink</td><td><span class="sg-chip" style="background:#E6D000"></span><code>#E6D000</code></td><td>Besuchte Links</td></tr>
+    </table>
+
+    <h3 class="mt-5">Folienraster</h3>
+    <dl class="deflist">
+      <div><dt>Format</dt><dd>16:9 — 33,87 × 19,05 cm</dd></div>
+      <div><dt>Rand</dt><dd>1,6 cm rundum</dd></div>
+      <div><dt>Spalten</dt><dd>12, Steg 0,4 cm</dd></div>
+      <div><dt>Schnitt-Anstieg</dt><dd>1,35 cm (4 % der Breite)</dd></div>
+      <div><dt>Schrift</dt><dd>Outfit 400 / 500 / 600</dd></div>
+    </dl>
+
+    <h3 class="mt-5">Was in PowerPoint anders läuft</h3>
+    <ul class="checks">
+      <li><strong>Schrift installieren.</strong> Outfit ist kostenlos über Google Fonts.
+          Sie muss auf jedem Rechner liegen, der die Datei bearbeitet.</li>
+      <li><strong>Immer als PDF weitergeben.</strong> Nur dann ist die Schrift eingebettet.
+          Eine <code>.pptx</code> auf einem fremden Rechner fällt auf eine Ersatzschrift zurück.</li>
+      <li><strong>Gelb nie als kleine Schrift auf Weiß.</strong> Auf Papier praktisch unsichtbar.
+          Auf gelber Fläche immer schwarze Schrift.</li>
+      <li><strong>Nur die mit <code>[P]</code> markierten Graustufen verwenden.</strong>
+          Die Zwischenstufen sind auf einem Bildschirm sichtbar, im Druck nicht.</li>
+      <li><strong>Große dunkle Flächen sparsam.</strong> Vollflächiges Dunkelgrau wirkt im
+          Digitaldruck fleckig; besser dunkle Fotos mit Verlauf als Grundlage nutzen.</li>
+      <li><strong>Randabfallende Fotos brauchen Beschnitt.</strong> PowerPoint kennt keinen
+          Anschnitt — Folie 6 mm größer anlegen, wenn die Druckerei Beschnitt verlangt.</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer class="band compact-foot">
+  <div class="wrap">
+    <div class="foot">
+      <a href="index.html" aria-label="Zur Startseite">
+        <img src="assets/images/logo.webp" alt="boMUC" width="336" height="120">
+      </a>
+      <p>boMUC Design System · Stand August 2026</p>
+      <nav aria-label="Weitere Links">
+        <a class="link" href="index.html">Website</a>
+        <a class="link" href="impressum.html#impressum">Impressum</a>
+        <a class="link" href="impressum.html#datenschutz">Datenschutz</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

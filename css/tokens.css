@@ -1,0 +1,162 @@
+/* ==========================================================================
+   boMUC Design System — Tokens
+   Single source of truth for screen and print.
+
+   Values marked [P] are the reduced set that survives print and PowerPoint.
+   Steps between unmarked greys are visible on a backlit screen but not on
+   paper, so print layouts must use only the [P] values.
+
+   PowerPoint theme slot mapping: see styleguide.html
+   ========================================================================== */
+
+@font-face {
+  font-family: Outfit;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/Outfit-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: Outfit;
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../assets/fonts/Outfit-SemiBold.woff2") format("woff2");
+}
+
+:root {
+  /* ---------- Accent ------------------------------------------------------
+     One accent only. Munich yellow, taken from the boMUC logo.
+     Sits close to process yellow, so a naive RGB to CMYK conversion at the
+     print shop holds up without a spot colour.
+     Contrast against --g-900 is ~17:1. Against white it is ~1.2:1, so yellow
+     is never text on a light ground: it is a fill with near-black text on it.
+  */
+  --acc:       #FFE700;               /* [P] */
+  --acc-press: #E6D000;               /* pressed / visited */
+  --acc-ink:   #0C0D0D;               /* [P] text placed ON yellow */
+
+  /* ---------- Grey ramp --------------------------------------------------- */
+  --g-900: #0C0D0D;                   /* [P] page ground / body ink on paper */
+  --g-800: #141616;
+  --g-700: #1C1F1F;
+  --g-600: #282C2C;                   /* [P] raised surface, muted ink on paper */
+  /* The ramp has a legibility threshold, not just a lightness order:
+     g-400 and lighter are cleared for text on dark grounds, g-500 and darker
+     are structure only (rules, fills, borders). Values were chosen against
+     --g-800, the lightest ground text sits on.
+  */
+  --g-500: #686D6D;                   /* [P] borders — 3.2:1, non-text minimum */
+  --g-400: #868B8B;                   /* smallest legible text — 4.8:1 */
+  --g-300: #9BA0A0;                   /* [P] muted text, captions — 6.3:1 */
+  --g-200: #B8BCBB;                   /* [P] hairlines on paper */
+  --g-100: #E0E2E1;
+  --g-000: #F4F5F4;                   /* [P] paper */
+
+  /* ---------- Semantic ---------------------------------------------------
+     Components reference these, never the ramp directly. Re-theming the site
+     means reassigning this block and nothing else.
+  */
+  --bg:          var(--g-900);
+  --bg-alt:      var(--g-800);
+  --bg-raised:   var(--g-700);
+  --bg-inset:    var(--g-600);
+  --text:        #EDEFEE;
+  --text-muted:  var(--g-300);
+  --text-faint:  var(--g-400);
+  --rule:        var(--g-600);
+  --rule-strong: var(--g-500);
+
+  /* ---------- Type -------------------------------------------------------
+     Outfit only, three weights. Install locally before editing PowerPoint
+     decks and always share print files as PDF so the font embeds.
+  */
+  --font: 'Outfit', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --fw-light: 400;                    /* display sizes */
+  --fw-book:  400;                    /* body */
+  --fw-bold:  600;                    /* labels, buttons, emphasis */
+
+  /* Seven steps. Four carry headings, three carry everything else — and it
+     is those three that do almost all the work, so they set the floor:
+     nothing on the site renders below 13px.
+
+     An earlier scale had eight steps bottoming out at 11px, with that one
+     value serving navigation, buttons, dates, captions, citations and the
+     footer. Five rarely-used display steps above a pair of overworked tiny
+     ones is what made the type feel both small and unsettled.
+
+     The lower three sit close together (18 / 16 / 14) so neighbouring text
+     reads as related rather than as a jump.
+  */
+  --fs-display: clamp(3.25rem, 8.5vw, 7.5rem);
+  --fs-1:       clamp(2.25rem, 5vw, 4rem);
+  --fs-2:       clamp(1.75rem, 3vw, 2.5rem);
+  --fs-3:       clamp(1.25rem, 1.8vw, 1.5rem);
+  --fs-body:    1.125rem;             /* 18px */
+  --fs-sm:      1rem;                 /* 16px — captions, dense lists */
+  --fs-label:   0.875rem;             /* 14px — uppercase UI, the floor */
+
+  --lh-display: 0.98;
+  --lh-head:    1.15;
+  --lh-body:    1.6;
+
+  --tr-label: 0.12em;                 /* uppercase labels */
+  --tr-tight: -0.035em;               /* display sizes */
+
+  /* ---------- Space — 8px base ------------------------------------------- */
+  --s-1: 0.5rem;
+  --s-2: 1rem;
+  --s-3: 1.5rem;
+  --s-4: 2rem;
+  --s-5: 3rem;
+  --s-6: 4rem;
+  --s-7: 6rem;
+  --s-8: 8rem;
+
+  --section-y: clamp(3.5rem, 8vw, 7rem);
+  --gutter:    clamp(1.25rem, 4vw, 4rem);
+  --max:       1440px;
+
+  /* ---------- Geometry ---------------------------------------------------
+     Zero radius everywhere is a rule of the system, declared so overrides
+     are visible in review rather than implicit.
+     --slant is the vertical rise of the section diagonal across the full
+     width. In PowerPoint: rise = 4% of slide width.
+  */
+  --radius: 0;
+
+  /* Three line weights, not one. A single 1px rule everywhere read as timid
+     on a dark ground — hairlines disappear and accent lines lose their job.
+       --hair  dividing rules inside dense lists and tables
+       --line  component edges that need to be seen
+       --bar   the accent: brand rules, active states, section markers
+  */
+  --hair: 1px;
+  --line: 2px;
+  --bar:  4px;
+
+  --slant:  clamp(1.75rem, 4vw, 4.5rem);
+  --hdr-h:  5.25rem;                  /* header height, for sticky offsets */
+
+  /* ---------- Texture ----------------------------------------------------
+     Two angle roles, kept deliberately separate:
+       --angle-hatch  decorative tilted hairlines and skewed accents
+       --slant        structural boundaries between sections
+     A section boundary at the hatch angle would eat the whole viewport, so
+     they cannot share one value. Anything decorative uses --angle-hatch.
+
+     78deg puts the lines 12 degrees off vertical, echoing the diagonal
+     banding of the Lumen Eighty reference.
+     PowerPoint equivalent: shape pattern fill, wide upward diagonal.
+  */
+  --angle-hatch: 78deg;
+  --hatch-gap:   14px;
+  --hatch-line:  rgb(255 231 0 / 7%);   /* on dark grounds */
+  --hatch-ink:   rgb(12 13 13 / 10%);   /* on yellow grounds */
+
+  /* ---------- Motion ----------------------------------------------------- */
+  --dur:  0.5s;
+  --dur-fast: 0.2s;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
