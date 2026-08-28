@@ -1,4 +1,4 @@
-# boMUC e.V. — website
+# boMUC e.V. — Website
 
 Public site of **boMUC e.V.**, the volunteer wind orchestra in Munich.
 Plain HTML, CSS, and a little JavaScript. No runtime framework.
@@ -21,9 +21,3 @@ npm run check
 GitHub Pages deploys a filtered `_site/` folder. Original photographs,
 `styleguide.html`, and Node tooling are not published. One workflow checks
 pull requests and deploys successful `main` builds.
-
-## Copyright
-
-Source code is MIT. Texts, logo, photographs, and concert artwork are
-© boMUC e.V., all rights reserved. See [LICENSE.md](LICENSE.md) and
-[NOTICE.md](NOTICE.md).

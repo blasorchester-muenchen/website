@@ -1,4 +1,4 @@
-# Agent notes for the boMUC site
+# boMUC e.V. — Agent notes
 
 Always-on guidance for edits. The live site is static HTML/CSS/vanilla JS.
 Node exists only for lint, tests, and GitHub Actions.

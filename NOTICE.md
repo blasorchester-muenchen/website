@@ -1,4 +1,4 @@
-# Copyright notice
+# boMUC e.V. — Copyright notice
 
 This repository is public so a non-profit orchestra can collaborate in the open.
 Visibility is not a licence to reuse orchestra assets.
