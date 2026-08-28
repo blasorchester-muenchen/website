@@ -8,6 +8,6 @@
     "rule-empty-line-before": null,
     "custom-property-empty-line-before": null,
     "at-rule-empty-line-before": null,
-    "property-no-vendor-prefix": [true, { "ignoreProperties": ["mask-image"] }]
+    "property-no-vendor-prefix": [true, { "ignoreProperties": ["mask-image", "-webkit-mask-image"] }]
   }
 }

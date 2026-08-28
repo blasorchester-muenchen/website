@@ -19,13 +19,13 @@
     "check": "npm run lint && npm run build && npm run test && npm run lighthouse"
   },
   "devDependencies": {
-    "@lhci/cli": "^0.14.0",
+    "@lhci/cli": "^0.15.1",
     "@playwright/test": "^1.62.1",
-    "eslint": "^9.39.5",
-    "html-validate": "^9.7.1",
-    "pa11y-ci": "^3.1.0",
-    "start-server-and-test": "^2.1.5",
-    "stylelint": "^16.26.1",
-    "stylelint-config-standard": "^36.0.1"
+    "eslint": "^10.9.1",
+    "html-validate": "^11.10.0",
+    "pa11y-ci": "^4.1.1",
+    "start-server-and-test": "^3.0.12",
+    "stylelint": "^17.14.1",
+    "stylelint-config-standard": "^40.0.0"
   }
 }
