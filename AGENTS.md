@@ -13,8 +13,8 @@ invite players and sponsors. Keep copy short. Concerts are the primary CTA.
 - Tokens live in `css/tokens.css`. Components in `css/style.css` must use the
   semantic layer (`--bg`, `--text`, `--rule`, `--acc`, `--acc-ink`), not the
   grey ramp, unless a private styleguide demo needs a literal swatch.
-- One accent: `#FFE700`. Yellow is a fill or a strong line, never small text
-  on white.
+- One accent: `#FFC600`, the yellow of the logo. It is a fill or a strong
+  line, never small text on white.
 - Radius is 0.
 - Two angles: `--slant` between sections, `--angle-hatch` for texture.
 - Three line weights: `--hair`, `--line`, `--bar`.

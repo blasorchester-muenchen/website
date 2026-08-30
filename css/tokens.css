@@ -29,11 +29,11 @@
      One accent only. Munich yellow, taken from the boMUC logo.
      Sits close to process yellow, so a naive RGB to CMYK conversion at the
      print shop holds up without a spot colour.
-     Contrast against --g-900 is ~17:1. Against white it is ~1.2:1, so yellow
+     Contrast against --g-900 is ~12:1. Against white it is ~1.6:1, so yellow
      is never text on a light ground: it is a fill with near-black text on it.
   */
-  --acc:       #FFE700;               /* [P] */
-  --acc-press: #E6D000;               /* pressed / visited */
+  --acc:       #FFC600;               /* [P] */
+  --acc-press: #E6B200;               /* pressed / visited */
   --acc-ink:   #0C0D0D;               /* [P] text placed ON yellow */
 
   /* ---------- Grey ramp --------------------------------------------------- */
@@ -152,7 +152,7 @@
   */
   --angle-hatch: 78deg;
   --hatch-gap:   14px;
-  --hatch-line:  rgb(255 231 0 / 7%);   /* on dark grounds */
+  --hatch-line:  rgb(255 198 0 / 7%);   /* on dark grounds */
   --hatch-ink:   rgb(12 13 13 / 10%);   /* on yellow grounds */
 
   /* ---------- Motion ----------------------------------------------------- */
