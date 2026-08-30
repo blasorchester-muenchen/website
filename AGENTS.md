@@ -44,6 +44,13 @@ per photograph: 800px `*-thumb.webp` files for inline `img src`, and high-qualit
 below-the-fold `srcset`s: they must load only after interaction. The logo needs
 only `logo.webp`. Strip metadata on derivatives only.
 
+`apple-touch-icon.png` and `icon-192.png`/`icon-512.png` come from the same
+script, built from `logo_no_text.png` on `#0C0D0D`. Ship only these large
+sizes: a baked 32px file turns the thin arcs to mud, so browsers downscale the
+512 instead. There is deliberately no `favicon.ico` and no SVG favicon — the
+only logo source is raster, and a hand-drawn approximation is worse than the
+real mark. Add an SVG only from a genuine vector original.
+
 Keep `width`/`height` accurate. Hero is eager; everything else is lazy.
 
 ## Legal

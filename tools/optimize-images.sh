@@ -61,6 +61,25 @@ echo "$JOBS" | while IFS='|' read -r name src thumb full; do
   printf '%-28s %s\n' "$name" "$(du -h "$OUT/${name}-thumb.webp" "$OUT/${name}.webp" | awk '{print $1}' | xargs echo)"
 done
 
+# Browser and app icons: the wordmark-free logo centred on the site's dark
+# ground. Only large sizes are shipped — the thin arcs collapse into mud when
+# baked into a 32px file, so browsers downscale a high-resolution PNG instead.
+icon() {
+  local dest="$1" canvas="$2" art="$3"
+  ffmpeg -nostdin -hide_banner -loglevel error -y -i "$SRC/logo_no_text.png" \
+    -filter_complex "color=c=0x0C0D0D:s=${canvas}x${canvas}[bg];[0:v]scale=-1:${art}:flags=lanczos[fg];[bg][fg]overlay=(W-w)/2:(H-h)/2,format=rgb24" \
+    -map_metadata -1 -frames:v 1 "$dest"
+  printf '%-28s %s\n' "$(basename "$dest")" "$(du -h "$dest" | awk '{print $1}')"
+}
+
+if [ -e "$SRC/logo_no_text.png" ]; then
+  icon assets/apple-touch-icon.png 180 152
+  icon assets/icon-192.png 192 165
+  icon assets/icon-512.png 512 440
+else
+  echo "skip (missing): logo_no_text.png" >&2
+fi
+
 # Share image for Open Graph (JPEG, ~1200px).
 if [ -e "$SRC/hero.jpg" ]; then
   ffmpeg -nostdin -hide_banner -loglevel error -y -i "$SRC/hero.jpg" \
