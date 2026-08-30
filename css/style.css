@@ -699,17 +699,20 @@ figure.frame figcaption {
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
   gap: var(--s-5);
 }
+/* Rows follow their content and the block does not stretch to the photo beside
+   it — stretched rows left a dead gap under the last role. */
 .board {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 1fr;
   gap: var(--hair);
   background: var(--rule);
   list-style: none;
+  align-self: start;
 }
+/* Top-aligned so neighbouring initials sit on one line when a name or role wraps. */
 .person {
   display: grid;
-  align-content: center;
+  align-content: start;
   background: var(--bg-alt);
   padding: var(--s-3) var(--s-2);
 }
