@@ -658,10 +658,12 @@ figure.frame figcaption {
 }
 .checks li::before {
   content: "";
-  width: 1rem;
-  height: var(--line);
-  background: var(--acc);
-  margin-top: 0.75em;
+  width: 0.8rem;
+  height: 0.45rem;
+  border-left: var(--line) solid var(--acc);
+  border-bottom: var(--line) solid var(--acc);
+  transform: rotate(-45deg);
+  margin-top: 0.5em;
 }
 
 .support-action { justify-content: flex-end; }
