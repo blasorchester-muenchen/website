@@ -646,6 +646,7 @@ figure.frame figcaption {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   gap: var(--s-2);
   padding-block: var(--s-2);
   border-bottom: var(--hair) solid var(--rule);
@@ -662,6 +663,7 @@ figure.frame figcaption {
 .legal .deflist > div {
   display: grid;
   grid-template-columns: minmax(8rem, 1fr) minmax(0, 1.5fr);
+  align-items: center;
 }
 
 /* ---------- Checklist --------------------------------------------------- */
