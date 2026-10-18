@@ -59,6 +59,24 @@
       var max = track.scrollWidth - track.clientWidth;
       prev.disabled = track.scrollLeft <= 2;
       next.disabled = track.scrollLeft >= max - 2;
+      highlight(max);
+    };
+
+    /* Touch screens have no hover, so the card nearest the middle of the
+       track takes over its job (CSS: .is-active under hover: none). */
+    var highlight = function (max) {
+      var cards = Array.prototype.slice.call(track.children);
+      var mid = track.scrollLeft + track.clientWidth / 2;
+      var best = cards[0];
+      if (track.scrollLeft >= max - 2) best = cards[cards.length - 1];
+      else if (track.scrollLeft > 2) {
+        var dist = Infinity;
+        cards.forEach(function (card) {
+          var d = Math.abs(card.offsetLeft - track.offsetLeft + card.offsetWidth / 2 - mid);
+          if (d < dist) { dist = d; best = card; }
+        });
+      }
+      cards.forEach(function (card) { card.classList.toggle('is-active', card === best); });
     };
 
     prev.addEventListener('click', function () {

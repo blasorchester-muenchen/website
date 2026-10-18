@@ -911,9 +911,14 @@ figure.frame figcaption {
   aspect-ratio: 16 / 10;
   object-fit: cover;
   filter: grayscale(1) contrast(1.05);
+  transition: filter var(--dur-fast) var(--ease);
 }
 .pc:hover .pc__vis img,
 .pc:focus-within .pc__vis img { filter: none; }
+/* No hover on touch: the card in view (set from js/main.js) is the lit one. */
+@media (hover: none) {
+  .pc.is-active .pc__vis img { filter: none; }
+}
 .pc__ph {
   display: grid;
   place-items: center;
