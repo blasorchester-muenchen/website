@@ -1089,14 +1089,27 @@ body:has(.lightbox[open]) { overflow: hidden; }
 }
 
 @media (width <= 40rem) {
-  .hero--full::after {
-    background: linear-gradient(
-      to top,
-      var(--bg) 4%,
-      color-mix(in srgb, var(--bg) 88%, transparent) 62%,
-      color-mix(in srgb, var(--bg) 46%, transparent) 100%);
+  /* A dimmed photo behind the text is nearly invisible on a phone, so the
+     photograph moves below the text at full brightness instead. */
+  .hero--full {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    min-height: 0;
+    padding-bottom: 0;
   }
-
+  .hero--full::after { display: none; }
+  .hero--full picture {
+    position: relative;
+    inset: auto;
+    order: 2;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    margin-top: var(--gutter);
+  }
+  .hero__bg { position: static; height: 100%; }
+  /* The header logo already carries the name on phones. */
+  .hero__brand { display: none; }
 
   .hdr__logo img { height: 2.75rem; }
   .board { grid-template-columns: repeat(2, 1fr); }
