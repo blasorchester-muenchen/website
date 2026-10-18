@@ -427,6 +427,10 @@ h1 + p, h2 + p, h3 + p { margin-top: var(--s-2); }
   letter-spacing: var(--tr-label);
   text-transform: uppercase;
   opacity: 0.7;
+  /* Caps are centred in their box, but the mixed-case title and date read
+     lower (x-height), so the caps look raised without this. */
+  position: relative;
+  top: 1px;
 }
 .next__title { font-size: var(--fs-3); font-weight: var(--fw-bold); }
 .next__when { font-weight: var(--fw-bold); }
