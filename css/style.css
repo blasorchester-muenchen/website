@@ -386,6 +386,8 @@ h1 + p, h2 + p, h3 + p { margin-top: var(--s-2); }
 .btn--ghost:hover { border-color: var(--acc); color: var(--acc); }
 .band--acc .btn--ghost { color: var(--acc-ink); border-color: color-mix(in srgb, var(--acc-ink) 40%, transparent); }
 .band--acc .btn--ghost:hover { background: var(--acc-ink); color: var(--acc); }
+/* Unavailable offer: a span, not a link, so it needs no pointer events. */
+.btn--off { color: var(--text-faint); border-color: var(--rule-strong); cursor: default; }
 .btn svg { width: 1.125rem; height: 1.125rem; flex-shrink: 0; }
 
 .link {
