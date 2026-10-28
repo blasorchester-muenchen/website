@@ -923,15 +923,8 @@ figure.frame figcaption {
 @media (hover: none) {
   .pc.is-active .pc__vis img { filter: none; }
 }
-.pc__ph {
-  display: grid;
-  place-items: center;
-  aspect-ratio: 16 / 10;
-  font-size: var(--fs-label);
-  letter-spacing: var(--tr-label);
-  text-transform: uppercase;
-  color: var(--text);
-}
+/* Portrait posters: keep the motif in the upper third inside the 16:10 crop. */
+.pc__vis .pc__img--top { object-position: 50% 30%; }
 .pc__body { padding: var(--s-3); display: flex; flex-direction: column; gap: var(--s-1); flex: 1; }
 .pc__date {
   font-size: var(--fs-label);
