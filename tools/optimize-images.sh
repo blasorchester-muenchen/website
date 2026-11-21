@@ -38,6 +38,8 @@ concert-across-borders|concert-across-borders.jpg|800|2800
 concert-misty-mountains|concert-misty-mountains.png|800|3200
 concert-green-gold|concert-green-gold.png|800|2800
 concert-aufbruch|concert-aufbruch.jpg|800|2800
+concert-hymn-and-halleluja|flyer-hymn-and-halleluja.png|240|1600
+concert-feuer-und-flamme|flyer-feuer-und-flamme.png|240|1600
 across-orchestra|across-orchestra.jpeg|800|3200
 across-brass|across-brass.jpeg|800|3200
 orchestra-weekend-2026|orchestra-weekend-2026.jpeg|800|3200
